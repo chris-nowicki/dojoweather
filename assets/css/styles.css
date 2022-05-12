@@ -1,0 +1,41 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* common variables */
+:root {
+    --container-widths: 60%;
+}
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+
+/* global elements */
+
+/* page wrapper */
+#navbar-wrapper {
+    background-color: #9FC5F8;
+}
+
+#navbar {
+    width: var(--container-widths);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px auto;
+    color: white;
+    padding: 5px;
+}
+
+.nav-links li {
+    display: inline-flex;
+    padding: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.4em;
+}
