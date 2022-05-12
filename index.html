@@ -11,20 +11,96 @@
         <!-- page wrapper -->
         <div id="page-wrapper">
             
-            <!-- navigation bar -->
+            <!-- navbar -->
             <div id="navbar-wrapper">
                 <div id="navbar">
                     <h1>DojoWeather</h1>
                     <div class="nav-links">
                         <ul>
-                            <li><a href="#" onclick="alert('You are viewing weather for Burbank')">Burbank</a></li>
-                            <li><a href="#" onclick="alert('You are viewing weather for Chicago')">Chicago</a></li>
-                            <li><a href="#" onclick="alert('You are viewing weather for Dallas')">Dallas</a></li>
+                            <li><a href="#" onclick="alert('Loading weather report...')">Burbank</a></li>
+                            <li><a href="#" onclick="alert('Loading weather report...')">Chicago</a></li>
+                            <li><a href="#" onclick="alert('Loading weather report...')">Dallas</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-        
+
+            <!-- body wrapper -->
+            <div class="body-wrapper">
+                
+                <!-- weather location header -->
+                <div class="weather-header">
+                    <h1>San Jose</h1>
+                    <div class="temp-scale-selection">
+                        <p>show temperature in</p>
+                        <select name="tempScales" onchange="scaleConversion(this)">
+                            <option>&#8451;</option>
+                            <option>&#8457;</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- 4 day forecast -->
+                <div class="forecast-container">
+
+                    <!-- day-card -->
+                    <div class="daycard" id="today">
+                        <h3>Today</h3>
+                        <img src="/assets/images/some_rain.png" alt="rain clouds">
+                        <p class="forcast-description">some rain</p>
+                        <div class="temperature">
+                            <p class="high"><span class="temp-value">24</span>&deg;</p>
+                            <p class="low"><span class="temp-value">18</span>&deg;</p>
+                        </div>
+                    </div>
+
+                    <!-- day-card -->
+                    <div class="daycard" id="tomorrow">
+                        <h3>Tomorrow</h3>
+                        <img src="/assets/images/some_sun.png" alt="sunny">
+                        <p class="forcast-description">some sun</p>
+                        <div class="temperature">
+                            <p class="high"><span class="temp-value">27</span>&deg;</p>
+                            <p class="low"><span class="temp-value">19</span>&deg;</p>
+                        </div>
+                    </div>
+                    <!-- day-card -->
+                    <div class="daycard" id="friday">
+                        <h3>Friday</h3>
+                        <img src="/assets/images/some_clouds.png" alt="clouds">
+                        <p class="forcast-description">some clouds</p>
+                        <div class="temperature">
+                            <p class="high"><span class="temp-value">21</span>&deg;</p>
+                            <p class="low"><span class="temp-value">16</span>&deg;</p>
+                        </div>
+                    </div>
+
+                    <!-- day-card -->
+                    <div class="daycard" id="saturday">
+                        <h3>Friday</h3>
+                        <img src="/assets/images/some_sun.png" alt="sunny">
+                        <p class="forcast-description">some sun</p>
+                        <div class="temperature">
+                            <p class="high"><span class="temp-value">26</span>&deg;</p>
+                            <p class="low"><span class="temp-value">21</span>&deg;</p>
+                        </div>
+                    </div>
+                    <!-- day card end -->
+                </div>
+                <!-- 4 day forecast end -->
+            </div>
+            <!-- body wrapper end -->
+
+            <!-- cookie warning box -->
+            <div id="cookie-time">
+                <img src="/assets/images/cookie.png" alt="image of a cookie">
+                <div class="cookie-description">
+                    <h3>Stop! Cookie time</h3>
+                    <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyse our traffic. <a href="#">Read More...</a></p>
+                </div>
+                <button class="accept-btn" onclick="removeBTN()">I Accept</button>
+            </div>
+            <!-- cookie warning box end -->
         </div>
         <!-- page wrapper end -->
 

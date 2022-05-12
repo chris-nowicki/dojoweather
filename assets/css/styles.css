@@ -6,19 +6,19 @@
 
 /* common variables */
 :root {
-    --container-widths: 60%;
+    --container-widths: 65%;
+    --container-padding: 10px;
 }
 
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
-
-/* global elements */
 
 /* page wrapper */
 #navbar-wrapper {
     background-color: #9FC5F8;
 }
 
+/* navbar */
 #navbar {
     width: var(--container-widths);
     display: flex;
@@ -26,16 +26,153 @@
     justify-content: space-between;
     margin: 0px auto;
     color: white;
-    padding: 5px;
+    padding: 10px 0px;
+    margin-bottom: 25px;
 }
 
+.nav-links {
+    margin-right: 20px;
+}
 .nav-links li {
     display: inline-flex;
-    padding: 15px;
+    padding-left: 20px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: white;
     font-size: 1.4em;
+}
+
+/* body wrapper */
+.body-wrapper {
+    width: var(--container-widths);
+    margin: 0px auto;
+}
+
+/* weather location header */
+.weather-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.temp-scale-selection {
+    display: flex;
+    align-items: center;
+}
+
+.temp-scale-selection  select {
+    padding: 2px;
+    margin-left: 10px;
+    border: 2px solid black;
+    font-weight: bold;
+}
+
+.temp-scale-selection  select:focus {
+    outline: none !important;
+}
+
+/* 4 day weather forecast */
+.forecast-container {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.daycard {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EEEEEE;
+}
+
+.daycard h3 {
+    margin: 15px 0px 10px 0px;
+}
+
+.daycard img {
+    height: 150px;
+    margin: 10px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.forcast-description {
+    margin-bottom: 30px;
+}
+
+.temperature {
+    width: 75%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.forcast-description {
+    margin-bottom: 25px;
+}
+
+.temperature p {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+p.high {
+    color: red;
+}
+
+p.low {
+    color: blue;
+}
+
+/* cookie time */
+
+#cookie-time {
+    height: 22%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    position:fixed;
+    bottom: 5px;
+    background-color: #EEEEEE;
+    border: 4px solid black;
+    margin: 0px 17.3%;
+    z-index: 1;
+}
+
+#cookie-time img {
+    height: 75px;
+    margin: 0px 15px;
+}
+
+.cookie-description {
+    font-size: 1.3em;
+}
+
+.cookie-description h3 {
+    margin-bottom: 5px;
+}
+
+.cookie-description a {
+    color: #749BBE;
+}
+
+.accept-btn {
+    width: 200px;
+    background-color: #2b78e4;
+    border: 1px solid black;
+    padding: 5px 5px;
+    box-shadow: 3px 3px black;
+    color: white;
+    font-weight: normal;
+    font-size: 1.1em;
+    margin: 0px 25px;
 }
